@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    background: #e3e5eb;
+}
+.button{
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    background: #e3e5eb;
+    box-shadow: 
+    20px 10px 30px #c5c3cf,
+    -20px -10px 30px #fff;
+    position: relative;
+    padding: 12px;
+}
+.button::before{
+    content: '';
+    position: absolute;
+    inset: 9%;
+    background: #cacbd7;
+    border-radius: 50%;
+}
+.button button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background: linear-gradient(300deg, red, #fd6d58);
+    color: #fff;
+    font-size: 55px;
+    z-index: 10;
+    cursor: pointer;
+}
+.button button:active{
+    width: 95%;
+    height: 95%;
+    background: linear-gradient(300deg,#fd6d58, red);
+}
+
+.button button:active::before{
+    background: linear-gradient(300deg, red, #ff7777);
+}
+.button button::before{
+    content: '';
+    position: absolute;
+    inset: 16px;
+    background: linear-gradient(300deg, #ff7777, red);
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: 
+    5px 5px 15px rgba(255, 0, 0, 0.788);
+}
